@@ -34,8 +34,8 @@ class _LoginState extends State<Login> {
 
   @override
   void initState() {
-    _userRef = db.reference().child("users");
-    _empIdRef = db.reference().child('EmployeeID');
+    _userRef = db.ref().child("users");
+    _empIdRef = db.ref().child('EmployeeID');
     authObject = new Auth();
 
     super.initState();

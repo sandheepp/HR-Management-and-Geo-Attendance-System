@@ -98,10 +98,16 @@ class DashboardMainPanel extends StatelessWidget {
     return widgets;
   }
 
-  List<StaggeredTile> _staggeredTiles() {
-    List<StaggeredTile> widgets = [];
+  List<StaggeredGridTile> _StaggeredGridTiles() {
+    List<StaggeredGridTile> widgets = [];
     tileData.forEach((tile) {
-      widgets.add(StaggeredTile.extent(1, 210.0));
+      widgets.add(StaggeredGridTile.extent(
+          crossAxisCellCount: 2,
+  mainAxisExtent: 210,
+    child: Container(
+    color: Colors.green,
+  ),
+    ));
     });
 
     return widgets;
@@ -120,13 +126,13 @@ class DashboardMainPanel extends StatelessWidget {
               topLeft: Radius.circular(16), topRight: Radius.circular(16))),
       child: Padding(
         padding: const EdgeInsets.all(4.0),
-        child: StaggeredGridView.count(
+        child: GridView.count(
           crossAxisCount: 2,
           crossAxisSpacing: 12.0,
           mainAxisSpacing: 12.0,
           padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           children: _listWidget(context),
-          staggeredTiles: _staggeredTiles(),
+          // StaggeredGridTiles: _StaggeredGridTiles(),
         ),
       ),
     );

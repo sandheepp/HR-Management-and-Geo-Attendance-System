@@ -1,9 +1,9 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=D:\Program Files\flutter"
-export "FLUTTER_APPLICATION_PATH=D:\Projects\HR-Management-and-Geo-Attendance-System"
+export "FLUTTER_ROOT=/Users/broadsword/Downloads/flutter"
+export "FLUTTER_APPLICATION_PATH=/Users/broadsword/projects/gps-attendance/hr_management_and_geo_attendance_system"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
-export "FLUTTER_TARGET=lib\main.dart"
+export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"

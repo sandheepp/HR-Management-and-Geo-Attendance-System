@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage>
   late AnimationController controller;
 
   OfficeDatabase officeDatabase = new OfficeDatabase();
-  final _databaseReference = FirebaseDatabase.instance.reference();
+  final _databaseReference = FirebaseDatabase.instance.ref();
   var geoFenceActive = false;
   late PermissionStatus result;
   String? error;

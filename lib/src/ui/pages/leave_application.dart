@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:geo_attendance_system/src/ui/constants/colors.dart';
 import 'package:geo_attendance_system/src/ui/widgets/loader_dialog.dart';
-import 'package:grouped_buttons/grouped_buttons.dart';
 
 import 'leave_status.dart';
 
@@ -66,9 +65,9 @@ class LeaveApplicationWidgetState extends State<LeaveApplicationWidget>
   @override
   void initState() {
     super.initState();
-    _userRef = db.reference().child("users");
-    _leaveRef = db.reference().child("leaves");
-    _managerRef = db.reference().child("managers");
+    _userRef = db.ref().child("users");
+    _leaveRef = db.ref().child("leaves");
+    _managerRef = db.ref().child("managers");
     _getManager();
     _getLeaves().then((DatabaseEvent databaseEvent) {
       setState(() {
@@ -408,32 +407,32 @@ class LeaveApplicationWidgetState extends State<LeaveApplicationWidget>
                                       const EdgeInsets.fromLTRB(0, 20, 0, 20),
                                   child: Text('Type of leave'),
                                 ),
-                                CheckboxGroup(
-                                  labels: <String>[
-                                    leaveType[0],
-                                    leaveType[1],
-                                    leaveType[2],
-                                  ],
-                                  checked: _checked,
-                                  activeColor: dashBoardColor,
-                                  onChange: (bool isChecked, String label,
-                                      int index) {
-                                    print(
-                                        "isChecked: $isChecked   label: $label  index: $index");
-                                    leaveIndex = index;
-                                  },
-                                  onSelected: (selected) => setState(() {
-                                    isSelected = true;
-                                    if (selected.length > 1) {
-                                      selected.removeAt(0);
-                                      print(
-                                          'selected length  ${selected.length}');
-                                    } else {
-                                      print("only one");
-                                    }
-                                    _checked = selected;
-                                  }),
-                                ),
+                                // CheckboxGroup(
+                                //   labels: <String>[
+                                //     leaveType[0],
+                                //     leaveType[1],
+                                //     leaveType[2],
+                                //   ],
+                                //   checked: _checked,
+                                //   activeColor: dashBoardColor,
+                                //   onChange: (bool isChecked, String label,
+                                //       int index) {
+                                //     print(
+                                //         "isChecked: $isChecked   label: $label  index: $index");
+                                //     leaveIndex = index;
+                                //   },
+                                //   onSelected: (selected) => setState(() {
+                                //     isSelected = true;
+                                //     if (selected.length > 1) {
+                                //       selected.removeAt(0);
+                                //       print(
+                                //           'selected length  ${selected.length}');
+                                //     } else {
+                                //       print("only one");
+                                //     }
+                                //     _checked = selected;
+                                //   }),
+                                // ),
                                 TextField(
                                   autofocus: false,
                                   //controller: emailController,

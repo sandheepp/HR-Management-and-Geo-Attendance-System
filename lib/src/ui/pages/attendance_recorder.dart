@@ -236,11 +236,11 @@ class AttendanceRecorderWidgetState extends State<AttendanceRecorderWidget> {
     }
   }
 
-  Future<void> _gotoLocation(double lat, double long) async {
-    final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
-        target: LatLng(lat, long), zoom: 15, tilt: 50.0, bearing: 45.0)));
-  }
+  // Future<void> _gotoLocation(double lat, double long) async {
+  //   final GoogleMapController controller = await _controller.future;
+  //   controller.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
+  //       target: LatLng(lat, long), zoom: 15, tilt: 50.0, bearing: 45.0)));
+  // }
 
   initPlatformState() async {
     await _locationService.changeSettings(

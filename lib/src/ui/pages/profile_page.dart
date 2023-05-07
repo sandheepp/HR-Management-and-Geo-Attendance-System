@@ -81,7 +81,7 @@ class _ContactItem extends StatelessWidget {
                   ...lines
                       .sublist(0, lines.length - 1)
                       .map<Widget>((String line) => Text(line)),
-                  Text(lines.last, style: themeData.textTheme.caption),
+                  Text(lines.last, style: themeData.textTheme.bodySmall),
                 ],
               ),
             ),

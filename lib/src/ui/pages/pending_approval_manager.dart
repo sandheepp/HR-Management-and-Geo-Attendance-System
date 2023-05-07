@@ -292,61 +292,51 @@ Icon getIcon(LeaveStatus leaveStatus) {
   switch (leaveStatus) {
     case LeaveStatus.approved:
       return listOfIcons[0];
-      break;
 
     case LeaveStatus.pending:
       return listOfIcons[1];
-      break;
 
     case LeaveStatus.rejected:
       return listOfIcons[2];
-      break;
 
     case LeaveStatus.undetermined:
       return listOfIcons[2];
-      break;
+    default:
+      return listOfIcons[2];
   }
-  return listOfIcons[2];
 }
 
 Color getColor(LeaveStatus leaveStatus) {
   switch (leaveStatus) {
     case LeaveStatus.approved:
       return listOfColors[0];
-      break;
 
     case LeaveStatus.pending:
       return listOfColors[1];
-      break;
 
     case LeaveStatus.rejected:
       return listOfColors[2];
-      break;
 
     case LeaveStatus.undetermined:
       return listOfColors[2];
-      break;
+    default:
+      return listOfColors[2];
   }
-  return listOfColors[2];
 }
 
 String getStatus(LeaveStatus leaveStatus) {
   switch (leaveStatus) {
     case LeaveStatus.approved:
       return "Approved";
-      break;
 
     case LeaveStatus.pending:
       return "Pending";
-      break;
 
     case LeaveStatus.rejected:
       return "Rejected";
-      break;
 
     case LeaveStatus.undetermined:
       return "Pending";
-      break;
   }
   return "Pending";
 }
@@ -369,21 +359,18 @@ String getLeaveType(LeaveType leaveType) {
   switch (leaveType) {
     case LeaveType.al:
       return "Annual Leave";
-      break;
 
     case LeaveType.ml:
       return "Medical Leave";
-      break;
 
     case LeaveType.cl:
       return "Casual Leave";
-      break;
 
     case LeaveType.undetermined:
       return "Leave";
-      break;
+    default:
+      return "Leave";
   }
-  return "Leave";
 }
 
 DateTime formattedProperDateTime(String date) {
